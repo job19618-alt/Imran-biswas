@@ -105,7 +105,7 @@ nav a{margin:5px;font-size:14px}
 <div class="section-title"><h2>📞 যোগাযোগ</h2></div>
 <p>📧 Email: imranshortlife19618@gmail.com</p>
 <p>📱 মোবাইল: 01974279573</p>
-<p>🌐 Facebook: <a href="https://www.facebook.com/imranshortlive" target="_blank" rel="noopener">আমার Facebook Page</a></p>
+<p>🌐 Facebook: <a href="https://www.facebook.com/imranshortlive" target="_blank" rel="noopener">https://www.facebook.com/imranshortlive</a></p>
 </section>
 
 <footer>
@@ -122,15 +122,4 @@ card.style.display=card.innerText.toLowerCase().includes(input)?"block":"none";
 </script>
 </body>
 </html>
-"""
-
-(out / "index.html").write_text(html, encoding="utf-8")
-shutil.copy2(src, out / "imran.jpg")
-
-zip_path = Path("/mnt/data/imran_hossain_website.zip")
-with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as z:
-    z.write(out / "index.html", "index.html")
-    z.write(out / "imran.jpg", "imran.jpg")
-
-print(f"Created: {zip_path}")
-    
+আপনাদের ভালোবাসায় আমি আর অনেক এগিয়ে যেতে চাই।
