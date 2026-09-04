@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ইমরান বিশ্বাস | শিক্ষা বিষয়ক তথ্য</title>
-    <meta name="google-site-verification" content="1RmdmWjhvRUOm64xHTu3-B0PhOvT_U-4ShfxGTogNuo" />
+    <title>ইমরান হোসেন | শিক্ষা বিষয়ক তথ্য</title>
+
+    <meta name="google-site-verification"
+          content="1RmdmWjhvRUOm64xHTu3-B0PhOvT_U-4ShfxGTogNuo">
+
     <meta name="description"
           content="ইমরান হোসেন - শিক্ষা বিষয়ক তথ্য, SSC, HSC, পরীক্ষার ফলাফল, নোটিশ ও পড়াশোনার টিপস।">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -23,7 +27,8 @@
             line-height: 1.7;
         }
 
-        /* Header */
+        /* ================= HEADER ================= */
+
         header {
             background: linear-gradient(135deg, #075e54, #0b8f7f);
             color: white;
@@ -58,12 +63,26 @@
             text-decoration: underline;
         }
 
-        /* Hero */
+
+        /* ================= HERO ================= */
+
         .hero {
             background: linear-gradient(135deg, #0b8f7f, #073b4c);
             color: white;
             text-align: center;
             padding: 80px 20px;
+        }
+
+        /* নিজের ছবি */
+
+        .hero img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
         }
 
         .hero h1 {
@@ -84,9 +103,16 @@
             border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
+            transition: 0.3s;
         }
 
-        /* Container */
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+
+        /* ================= CONTAINER ================= */
+
         .container {
             max-width: 1200px;
             margin: auto;
@@ -103,7 +129,32 @@
             color: #075e54;
         }
 
-        /* Cards */
+
+        /* ================= SEARCH ================= */
+
+        .search-box {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .search-box input {
+            width: 80%;
+            max-width: 600px;
+            padding: 15px 20px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-box input:focus {
+            border-color: #0b8f7f;
+            box-shadow: 0 0 8px rgba(11,143,127,0.2);
+        }
+
+
+        /* ================= CARDS ================= */
+
         .cards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -120,6 +171,7 @@
 
         .card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
         }
 
         .card .icon {
@@ -140,7 +192,13 @@
             text-decoration: none;
         }
 
-        /* Notice */
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ================= NOTICE ================= */
+
         .notice {
             background: white;
             padding: 25px;
@@ -162,7 +220,9 @@
             font-size: 14px;
         }
 
-        /* About */
+
+        /* ================= ABOUT ================= */
+
         .about {
             background: #e9f7f5;
         }
@@ -174,25 +234,21 @@
             background: white;
             padding: 35px;
             border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
         }
 
-        /* Search */
-        .search-box {
-            text-align: center;
-            margin-bottom: 30px;
+        .about-box img {
+            width: 170px;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #0b8f7f;
+            margin-bottom: 20px;
         }
 
-        .search-box input {
-            width: 80%;
-            max-width: 600px;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 30px;
-            font-size: 16px;
-            outline: none;
-        }
 
-        /* Contact */
+        /* ================= CONTACT ================= */
+
         .contact {
             text-align: center;
         }
@@ -201,7 +257,19 @@
             margin: 10px;
         }
 
-        /* Footer */
+        .contact a {
+            color: #075e54;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ================= FOOTER ================= */
+
         footer {
             background: #073b4c;
             color: white;
@@ -209,17 +277,33 @@
             padding: 30px 15px;
         }
 
-        /* Mobile */
-        @media (01974279573) {
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 768px) {
 
             .nav {
                 flex-direction: column;
                 gap: 12px;
             }
 
+            nav {
+                text-align: center;
+            }
+
             nav a {
                 margin: 5px;
                 font-size: 14px;
+                display: inline-block;
+            }
+
+            .hero {
+                padding: 60px 20px;
+            }
+
+            .hero img {
+                width: 130px;
+                height: 130px;
             }
 
             .hero h1 {
@@ -237,14 +321,24 @@
             .search-box input {
                 width: 100%;
             }
+
+            .about-box img {
+                width: 140px;
+                height: 140px;
+            }
         }
+
     </style>
 </head>
 
+
 <body>
 
-<!-- Header -->
+
+<!-- ================= HEADER ================= -->
+
 <header>
+
     <div class="nav">
 
         <div class="logo">
@@ -252,19 +346,31 @@
         </div>
 
         <nav>
+
             <a href="#home">হোম</a>
+
             <a href="#education">শিক্ষা</a>
+
             <a href="#notice">নোটিশ</a>
+
             <a href="#about">আমার সম্পর্কে</a>
+
             <a href="#contact">যোগাযোগ</a>
+
         </nav>
 
     </div>
+
 </header>
 
 
-<!-- Hero -->
+
+<!-- ================= HERO ================= -->
+
 <section class="hero" id="home">
+
+    <!-- নিজের ছবি এখানে দেখাবে -->
+    <img src="imran.jpg" alt="ইমরান হোসেন">
 
     <h1>ইমরান হোসেন</h1>
 
@@ -273,22 +379,30 @@
     </p>
 
     <a href="#education" class="btn">
-        তথ্য দেখুন
+        📚 তথ্য দেখুন
     </a>
 
 </section>
 
 
-<!-- Education -->
+
+<!-- ================= EDUCATION ================= -->
+
 <section class="container" id="education">
 
     <div class="section-title">
+
         <h2>📚 শিক্ষা বিষয়ক তথ্য</h2>
-        <p>শিক্ষার্থীদের প্রয়োজনীয় তথ্য এক জায়গায়</p>
+
+        <p>
+            শিক্ষার্থীদের প্রয়োজনীয় তথ্য এক জায়গায়
+        </p>
+
     </div>
 
 
-    <!-- Search -->
+    <!-- SEARCH -->
+
     <div class="search-box">
 
         <input
@@ -301,7 +415,13 @@
     </div>
 
 
+
+    <!-- CARDS -->
+
     <div class="cards" id="cardContainer">
+
+
+        <!-- SSC -->
 
         <div class="card">
 
@@ -314,10 +434,15 @@
                 বোর্ড চ্যালেঞ্জ ও গুরুত্বপূর্ণ তথ্য।
             </p>
 
-            <a href="#">আরও জানুন →</a>
+            <a href="#">
+                আরও জানুন →
+            </a>
 
         </div>
 
+
+
+        <!-- HSC -->
 
         <div class="card">
 
@@ -330,10 +455,15 @@
                 ফলাফল ও প্রয়োজনীয় তথ্য।
             </p>
 
-            <a href="#">আরও জানুন →</a>
+            <a href="#">
+                আরও জানুন →
+            </a>
 
         </div>
 
+
+
+        <!-- PREPARATION -->
 
         <div class="card">
 
@@ -346,10 +476,15 @@
                 কৌশল ও গুরুত্বপূর্ণ টিপস।
             </p>
 
-            <a href="#">আরও জানুন →</a>
+            <a href="#">
+                আরও জানুন →
+            </a>
 
         </div>
 
+
+
+        <!-- NOTICE -->
 
         <div class="card">
 
@@ -362,10 +497,15 @@
                 গুরুত্বপূর্ণ নোটিশ।
             </p>
 
-            <a href="#">আরও জানুন →</a>
+            <a href="#">
+                আরও জানুন →
+            </a>
 
         </div>
 
+
+
+        <!-- RESULT -->
 
         <div class="card">
 
@@ -378,10 +518,15 @@
                 ফলাফল দেখার নিয়ম।
             </p>
 
-            <a href="#">আরও জানুন →</a>
+            <a href="#">
+                আরও জানুন →
+            </a>
 
         </div>
 
+
+
+        <!-- TIPS -->
 
         <div class="card">
 
@@ -394,32 +539,42 @@
                 পড়াশোনার টিপস ও পরামর্শ।
             </p>
 
-            <a href="#">আরও জানুন →</a>
+            <a href="#">
+                আরও জানুন →
+            </a>
 
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- Notice -->
+
+<!-- ================= NOTICE ================= -->
+
 <section class="container" id="notice">
 
     <div class="section-title">
 
         <h2>📢 সর্বশেষ নোটিশ</h2>
 
-        <p>গুরুত্বপূর্ণ শিক্ষা সংক্রান্ত আপডেট</p>
+        <p>
+            গুরুত্বপূর্ণ শিক্ষা সংক্রান্ত আপডেট
+        </p>
 
     </div>
 
 
     <div class="notice">
 
+
         <div class="notice-item">
 
-            <h3>SSC পরীক্ষার ফলাফল সংক্রান্ত তথ্য</h3>
+            <h3>
+                SSC পরীক্ষার ফলাফল সংক্রান্ত তথ্য
+            </h3>
 
             <p class="date">
                 প্রকাশিত: ৪ সেপ্টেম্বর ২০২৬
@@ -428,9 +583,12 @@
         </div>
 
 
+
         <div class="notice-item">
 
-            <h3>শিক্ষার্থীদের জন্য গুরুত্বপূর্ণ নির্দেশনা</h3>
+            <h3>
+                শিক্ষার্থীদের জন্য গুরুত্বপূর্ণ নির্দেশনা
+            </h3>
 
             <p class="date">
                 প্রকাশিত: ৩ সেপ্টেম্বর ২০২৬
@@ -439,9 +597,12 @@
         </div>
 
 
+
         <div class="notice-item">
 
-            <h3>পরীক্ষার প্রস্তুতি নিয়ে বিশেষ পরামর্শ</h3>
+            <h3>
+                পরীক্ষার প্রস্তুতি নিয়ে বিশেষ পরামর্শ
+            </h3>
 
             <p class="date">
                 প্রকাশিত: ১ সেপ্টেম্বর ২০২৬
@@ -449,38 +610,59 @@
 
         </div>
 
+
     </div>
 
 </section>
 
 
-<!-- About -->
+
+<!-- ================= ABOUT ================= -->
+
 <section class="about" id="about">
 
     <div class="container">
 
         <div class="section-title">
 
-            <h2>👤 ইমরান হোসেন সম্পর্কে</h2>
+            <h2>
+                👤 ইমরান হোসেন সম্পর্কে
+            </h2>
 
         </div>
 
 
         <div class="about-box">
 
+
+            <!-- নিজের ছবি -->
+
+            <img
+                src="imran.jpg"
+                alt="ইমরান হোসেন"
+            >
+
+
             <p>
+
                 স্বাগতম আমার শিক্ষা বিষয়ক ওয়েবসাইটে।
                 এখানে শিক্ষার্থীদের জন্য প্রয়োজনীয় শিক্ষা তথ্য,
                 পরীক্ষার আপডেট, নোটিশ, ফলাফল এবং পড়াশোনার
                 বিভিন্ন টিপস প্রকাশ করা হবে।
+
             </p>
+
 
             <br>
 
+
             <p>
+
                 আমাদের লক্ষ্য হলো শিক্ষার্থীদের কাছে
                 প্রয়োজনীয় তথ্য সহজ ও সুন্দরভাবে পৌঁছে দেওয়া।
+
             </p>
+
 
         </div>
 
@@ -489,28 +671,58 @@
 </section>
 
 
-<!-- Contact -->
+
+<!-- ================= CONTACT ================= -->
+
 <section class="container contact" id="contact">
 
     <div class="section-title">
 
-        <h2>📞 যোগাযোগ</h2>
+        <h2>
+            📞 যোগাযোগ
+        </h2>
 
     </div>
 
-    <p>📧 Email: imranshortlife19618@gmail.com</p>
 
-    <p>📱 মোবাইল: 01974279573</p>
+    <p>
+        📧 Email:
+        <a href="mailto:imranshortlife19618@gmail.com">
+            imranshortlife19618@gmail.com
+        </a>
+    </p>
 
-    <p>🌐 Facebook: https://www.facebook.com/imranshortlive</p>
+
+    <p>
+        📱 মোবাইল:
+        <a href="tel:01974279573">
+            01974279573
+        </a>
+    </p>
+
+
+    <p>
+        🌐 Facebook:
+        <a
+            href="https://www.facebook.com/imranshortlive"
+            target="_blank"
+        >
+            Facebook Profile
+        </a>
+    </p>
+
 
 </section>
 
 
-<!-- Footer -->
+
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
-    <h3>📚 ইমরান হোসেন</h3>
+    <h3>
+        📚 ইমরান হোসেন
+    </h3>
 
     <p>
         শিক্ষা বিষয়ক তথ্যের জন্য আমাদের সাথে থাকুন।
@@ -525,22 +737,30 @@
 </footer>
 
 
+
+<!-- ================= JAVASCRIPT ================= -->
+
 <script>
 
     function searchCards() {
 
         let input =
-            document.getElementById("search")
+            document
+            .getElementById("search")
             .value
             .toLowerCase();
 
         let cards =
-            document.querySelectorAll(".card");
+            document
+            .querySelectorAll(".card");
+
 
         cards.forEach(function(card) {
 
             let text =
-                card.innerText.toLowerCase();
+                card.innerText
+                .toLowerCase();
+
 
             if (text.includes(input)) {
 
@@ -558,5 +778,6 @@
 
 </script>
 
+
 </body>
-        </html>
+</html>
