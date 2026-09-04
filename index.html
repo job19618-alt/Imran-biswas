@@ -290,7 +290,14 @@ card.style.display=card.innerText.toLowerCase().includes(input)?"block":"none";
 
 
     /* =====================================
-       আপনার Firebase Configuration এখানে বসান
+       const firebaseConfig = {
+    apiKey: "আপনার_API_KEY",
+    authDomain: "আপনার_PROJECT_ID.firebaseapp.com",
+    projectId: "আপনার_PROJECT_ID",
+    storageBucket: "আপনার_PROJECT_ID.firebasestorage.app",
+    messagingSenderId: "আপনার_SENDER_ID",
+    appId: "আপনার_APP_ID"
+};
        ===================================== */
 
     const firebaseConfig = {
@@ -334,6 +341,7 @@ card.style.display=card.innerText.toLowerCase().includes(input)?"block":"none";
         if (!email || !password) {
 
             message.innerHTML =
+        
                 "⚠️ Email এবং Password লিখুন।";
 
             return;
